@@ -1,0 +1,1339 @@
+@prefix : <http://www.semanticweb.org/pc/ontologies/2019/1/untitled-ontology-17> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund> .
+
+<http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund> rdf:type owl:Ontology ;
+                                                                    rdfs:comment "The ontology of the Borussia Dortmund which is a German sport club based in Dortmund, North Rhine-Westphalia." .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/height
+<http://www.semanticweb.org/pc/ontologies/2019/1/height> rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Win
+<http://www.semanticweb.org/pc/ontologies/2019/1/Win> rdf:type owl:ObjectProperty ;
+                                                      rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofAttack
+<http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofAttack> rdf:type owl:ObjectProperty ;
+                                                                     rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofDefence
+<http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofDefence> rdf:type owl:ObjectProperty ;
+                                                                      rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofPower
+<http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofPower> rdf:type owl:ObjectProperty ;
+                                                                    rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofSpeed
+<http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofSpeed> rdf:type owl:ObjectProperty ;
+                                                                    rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/hasCoachType
+<http://www.semanticweb.org/pc/ontologies/2019/1/hasCoachType> rdf:type owl:ObjectProperty ;
+                                                               rdfs:subPropertyOf owl:topObjectProperty ;
+                                                               owl:inverseOf <http://www.semanticweb.org/pc/ontologies/2019/1/isCoachTypeOf> ;
+                                                               rdfs:domain <http://www.semanticweb.org/pc/ontologies/2019/1/Coaches> ;
+                                                               rdfs:range <http://www.semanticweb.org/pc/ontologies/2019/1/CoachType> .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/hasHomeField
+<http://www.semanticweb.org/pc/ontologies/2019/1/hasHomeField> rdf:type owl:ObjectProperty ;
+                                                               rdfs:subPropertyOf owl:topObjectProperty ;
+                                                               rdf:type owl:FunctionalProperty .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/hasPosition
+<http://www.semanticweb.org/pc/ontologies/2019/1/hasPosition> rdf:type owl:ObjectProperty ;
+                                                              rdfs:subPropertyOf owl:topObjectProperty ;
+                                                              owl:inverseOf <http://www.semanticweb.org/pc/ontologies/2019/1/isPositionOf> ;
+                                                              rdfs:domain <http://www.semanticweb.org/pc/ontologies/2019/1/Player> ;
+                                                              rdfs:range <http://www.semanticweb.org/pc/ontologies/2019/1/Position> .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/hasSponsorType
+<http://www.semanticweb.org/pc/ontologies/2019/1/hasSponsorType> rdf:type owl:ObjectProperty ,
+                                                                          owl:FunctionalProperty .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/hasTeammates
+<http://www.semanticweb.org/pc/ontologies/2019/1/hasTeammates> rdf:type owl:ObjectProperty ,
+                                                                        owl:SymmetricProperty ,
+                                                                        owl:TransitiveProperty .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/isCoachTypeOf
+<http://www.semanticweb.org/pc/ontologies/2019/1/isCoachTypeOf> rdf:type owl:ObjectProperty ;
+                                                                rdfs:subPropertyOf owl:topObjectProperty ;
+                                                                rdfs:domain <http://www.semanticweb.org/pc/ontologies/2019/1/CoachType> ;
+                                                                rdfs:range <http://www.semanticweb.org/pc/ontologies/2019/1/CoachType> .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/isPositionOf
+<http://www.semanticweb.org/pc/ontologies/2019/1/isPositionOf> rdf:type owl:ObjectProperty ;
+                                                               rdfs:subPropertyOf owl:topObjectProperty ;
+                                                               rdfs:domain <http://www.semanticweb.org/pc/ontologies/2019/1/Position> ;
+                                                               rdfs:range <http://www.semanticweb.org/pc/ontologies/2019/1/Player> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/height
+<http://www.semanticweb.org/pc/ontologies/2019/1/height> rdf:type owl:DatatypeProperty ;
+                                                         rdfs:domain <http://www.semanticweb.org/pc/ontologies/2019/1/Player> ;
+                                                         rdfs:range xsd:integer ;
+                                                         owl:propertyDisjointWith <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#No.> .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#No.
+<http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#No.> rdf:type owl:DatatypeProperty ;
+                                                                       rdfs:subPropertyOf owl:topDataProperty ;
+                                                                       rdf:type owl:FunctionalProperty ;
+                                                                       rdfs:domain <http://www.semanticweb.org/pc/ontologies/2019/1/Player> ;
+                                                                       rdfs:range xsd:integer .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Athletik-Trainer
+<http://www.semanticweb.org/pc/ontologies/2019/1/Athletik-Trainer> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/CoachType> ;
+                                                                   rdfs:label "Athletik-Trainer" ;
+                                                                   <http://www.w3.org/2004/02/skos/core#definition> "An athletic trainer is a certified and licensed health care professional who practices in the field of sports medicine." .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundArgentina
+<http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundArgentina> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Nationality> ;
+                                                                            rdfs:label "Argentina" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundBelgium
+<http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundBelgium> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Nationality> ;
+                                                                          rdfs:label "Belgium" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundDenmark
+<http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundDenmark> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Nationality> ;
+                                                                          rdfs:label "Denmark" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundEngland
+<http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundEngland> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Nationality> ;
+                                                                          rdfs:label "England" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundFrance
+<http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundFrance> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Nationality> ;
+                                                                         rdfs:label "France" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundGermany
+<http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundGermany> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Nationality> ;
+                                                                          rdfs:label "Germany" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundJapan
+<http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundJapan> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Nationality> ;
+                                                                        rdfs:label "Japan" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundMorocco
+<http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundMorocco> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Nationality> ;
+                                                                          rdfs:label "Morocco" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundPoland
+<http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundPoland> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Nationality> ;
+                                                                         rdfs:label "Poland" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundPortugal
+<http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundPortugal> rdf:type owl:Class ;
+                                                                           rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Nationality> ;
+                                                                           rdfs:label "Portugal" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundSpain
+<http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundSpain> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Nationality> ;
+                                                                        rdfs:label "Spain" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundSwitzerland
+<http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundSwitzerland> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Nationality> ;
+                                                                              rdfs:label "Switzerland" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundTurkey
+<http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundTurkey> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Nationality> ;
+                                                                         rdfs:label "Turkey" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundUSA
+<http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundUSA> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Nationality> ;
+                                                                      rdfs:label "USA" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Bundesliga
+<http://www.semanticweb.org/pc/ontologies/2019/1/Bundesliga> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Honours> ;
+                                                             rdfs:label "Bundesliga" ;
+                                                             <http://www.w3.org/2004/02/skos/core#definition> "The Bundesliga (German: [ˈbʊndəsˌliːɡa] (About this soundlisten); lit. English: \"Federal League\", sometimes referred to as the Fußball-Bundesliga or 1. Bundesliga) is a professional association football league in Germany and the football league with the highest average stadium attendance worldwide." .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/CEO
+<http://www.semanticweb.org/pc/ontologies/2019/1/CEO> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/People> ;
+                                                      rdfs:label "CEO" ;
+                                                      <http://www.w3.org/2004/02/skos/core#definition> "The chief executive officer (CEO)." .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Champion
+<http://www.semanticweb.org/pc/ontologies/2019/1/Champion> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Ranking> ;
+                                                           rdfs:label "Champion" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Chef-Coach
+<http://www.semanticweb.org/pc/ontologies/2019/1/Chef-Coach> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/CoachType> ;
+                                                             rdfs:label "Chef-Coach" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Co-trainer
+<http://www.semanticweb.org/pc/ontologies/2019/1/Co-trainer> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/CoachType> ;
+                                                             rdfs:label "Co-trainer" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/CoachType
+<http://www.semanticweb.org/pc/ontologies/2019/1/CoachType> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Coaches> ;
+                                                            rdfs:label "Coach Type" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Coaches
+<http://www.semanticweb.org/pc/ontologies/2019/1/Coaches> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/People> ;
+                                                          <http://www.w3.org/2004/02/skos/core#definition> "Coaches" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Defender
+<http://www.semanticweb.org/pc/ontologies/2019/1/Defender> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Position> ,
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/hasTeammates> ;
+                                                                             owl:someValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Forward>
+                                                                           ] ,
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/hasTeammates> ;
+                                                                             owl:someValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Goalkeeper>
+                                                                           ] ,
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/hasTeammates> ;
+                                                                             owl:someValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Midfielder>
+                                                                           ] ;
+                                                           rdfs:label "Defender" ;
+                                                           <http://www.w3.org/2004/02/skos/core#definition> "In the sport of association football, a defender is an outfield player whose primary role is to prevent the opposing team from scoring goals." .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Evonik
+<http://www.semanticweb.org/pc/ontologies/2019/1/Evonik> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Sponsors> ,
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/hasSponsorType> ;
+                                                                           owl:allValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Shirt_Sponsor>
+                                                                         ] ;
+                                                         rdfs:label "Evonik" ;
+                                                         <http://www.w3.org/2004/02/skos/core#definition> "Evonik Industries AG is an industrial corporation headquartered in Essen, North Rhine-Westphalia, Germany, the largest specialty chemicals company in the world,[2] owned by RAG Foundation." .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Fitness_Coach
+<http://www.semanticweb.org/pc/ontologies/2019/1/Fitness_Coach> rdf:type owl:Class ;
+                                                                rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/CoachType> ;
+                                                                rdfs:label "Fitness Coach" ;
+                                                                <http://www.w3.org/2004/02/skos/core#definition> "A personal trainer is an individual certified to have a varying degree of knowledge of general fitness involved in exercise prescription and instruction." .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Forward
+<http://www.semanticweb.org/pc/ontologies/2019/1/Forward> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Position> ,
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/hasTeammates> ;
+                                                                            owl:someValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Defender>
+                                                                          ] ,
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/hasTeammates> ;
+                                                                            owl:someValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Goalkeeper>
+                                                                          ] ,
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/hasTeammates> ;
+                                                                            owl:someValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Midfielder>
+                                                                          ] ;
+                                                          rdfs:label "Forward" ;
+                                                          <http://www.w3.org/2004/02/skos/core#definition> "Forwards are the players on an association football team who play nearest to the opposing team's goal, and are therefore most responsible for scoring goals." .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/German_Cup
+<http://www.semanticweb.org/pc/ontologies/2019/1/German_Cup> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Honours> ;
+                                                             rdfs:label "German Cup" ;
+                                                             <http://www.w3.org/2004/02/skos/core#definition> "The DFB-Pokal (English: German Cup) is a German knockout football cup competition held annually by the Deutscher Fußball-Bund (DFB) (English: German Football Association)." .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Goalkeeper
+<http://www.semanticweb.org/pc/ontologies/2019/1/Goalkeeper> rdf:type owl:Class ;
+                                                             owl:equivalentClass [ rdf:type owl:Class ;
+                                                                                   owl:oneOf ( <http://www.semanticweb.org/pc/ontologies/2019/1/Marwin_Hitz>
+                                                                                               <http://www.semanticweb.org/pc/ontologies/2019/1/Roman_Burki>
+                                                                                             )
+                                                                                 ] ;
+                                                             rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Position> ,
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/hasTeammates> ;
+                                                                               owl:someValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Defender>
+                                                                             ] ,
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/hasTeammates> ;
+                                                                               owl:someValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Forward>
+                                                                             ] ,
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/hasTeammates> ;
+                                                                               owl:someValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Midfielder>
+                                                                             ] ;
+                                                             rdfs:label "Goalkeeper" ;
+                                                             <http://www.w3.org/2004/02/skos/core#definition> "In floorball, the goalkeeper defends his team's goal and has special privileges within the game. He is the only player who may use his hands to play the ball. Goalkeepers do not have sticks, and they move in the goal crease on their knees, attempting to save the shots on goal." .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Honours
+<http://www.semanticweb.org/pc/ontologies/2019/1/Honours> rdf:type owl:Class ;
+                                                          rdfs:label "Honours" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Kit_Manufacturer
+<http://www.semanticweb.org/pc/ontologies/2019/1/Kit_Manufacturer> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Sponsor_Type> ;
+                                                                   rdfs:label "Kit_Manufacturer" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Midfielder
+<http://www.semanticweb.org/pc/ontologies/2019/1/Midfielder> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Position> ,
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/hasTeammates> ;
+                                                                               owl:someValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Defender>
+                                                                             ] ,
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/hasTeammates> ;
+                                                                               owl:someValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Forward>
+                                                                             ] ,
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/hasTeammates> ;
+                                                                               owl:someValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Goalkeeper>
+                                                                             ] ;
+                                                             rdfs:label "Midfielder" ;
+                                                             <http://www.w3.org/2004/02/skos/core#definition> "A midfielder is an association football position. Midfielders are generally positioned on the field between their team's defenders and forwards." .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Nationality
+<http://www.semanticweb.org/pc/ontologies/2019/1/Nationality> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/People> .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Opel
+<http://www.semanticweb.org/pc/ontologies/2019/1/Opel> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Sponsors> ,
+                                                                       [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/hasSponsorType> ;
+                                                                         owl:allValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Sleeve_Sponsor>
+                                                                       ] ;
+                                                       rdfs:label "Opel" ;
+                                                       <http://www.w3.org/2004/02/skos/core#definition> "Opel (German pronunciation: [ˈoːpl̩]) is a German automobile manufacturer, a subsidiary of French automaker Groupe PSA since August 2017." .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Out_On_Loan_Player
+<http://www.semanticweb.org/pc/ontologies/2019/1/Out_On_Loan_Player> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Player> ;
+                                                                     rdfs:label "Out On Loan Player" ;
+                                                                     <http://www.w3.org/2004/02/skos/core#definition> "In sports, a loan involves a particular player being able to temporarily play for a club other than the one he is currently contracted to. Loan deals may last from a few weeks to all season-long and can persist for multiple seasons." .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/People
+<http://www.semanticweb.org/pc/ontologies/2019/1/People> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Player
+<http://www.semanticweb.org/pc/ontologies/2019/1/Player> rdf:type owl:Class ;
+                                                         owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/pc/ontologies/2019/1/Player>
+                                                                                                    [ rdf:type owl:Restriction ;
+                                                                                                      owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/hasPosition> ;
+                                                                                                      owl:maxCardinality "2"^^xsd:nonNegativeInteger
+                                                                                                    ]
+                                                                                                  ) ;
+                                                                               rdf:type owl:Class
+                                                                             ] ;
+                                                         rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/People> ,
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/hasHomeField> ;
+                                                                           owl:hasValue <http://www.semanticweb.org/pc/ontologies/2019/1/Signal_Iduna_Park>
+                                                                         ] .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Position
+<http://www.semanticweb.org/pc/ontologies/2019/1/Position> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Player> ;
+                                                           rdfs:label "Position" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Puma
+<http://www.semanticweb.org/pc/ontologies/2019/1/Puma> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Sponsors> ,
+                                                                       [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/hasSponsorType> ;
+                                                                         owl:allValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Kit_Manufacturer>
+                                                                       ] ;
+                                                       rdfs:label "Puma" ;
+                                                       <http://www.w3.org/2004/02/skos/core#definition> "Puma SE, branded as Puma, is a German multinational company that designs and manufactures athletic and casual footwear, apparel and accessories, which is headquartered in Herzogenaurach, Bavaria, Germany." .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Ranking
+<http://www.semanticweb.org/pc/ontologies/2019/1/Ranking> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Honours> ;
+                                                          rdfs:label "Ranking" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Runner_up
+<http://www.semanticweb.org/pc/ontologies/2019/1/Runner_up> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Ranking> ;
+                                                            rdfs:label "Runner_up" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Shirt_Sponsor
+<http://www.semanticweb.org/pc/ontologies/2019/1/Shirt_Sponsor> rdf:type owl:Class ;
+                                                                rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Sponsor_Type> ;
+                                                                rdfs:label "Shirt_Sponsor" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Sleeve_Sponsor
+<http://www.semanticweb.org/pc/ontologies/2019/1/Sleeve_Sponsor> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Sponsor_Type> ;
+                                                                 rdfs:label "Sleeve_Sponsor" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Sponsor_Type
+<http://www.semanticweb.org/pc/ontologies/2019/1/Sponsor_Type> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Sponsorship> ;
+                                                               rdfs:label "Sponsor_Type" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Sponsors
+<http://www.semanticweb.org/pc/ontologies/2019/1/Sponsors> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Sponsorship> ;
+                                                           rdfs:label "Sponsors" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Sponsorship
+<http://www.semanticweb.org/pc/ontologies/2019/1/Sponsorship> rdf:type owl:Class ;
+                                                              rdfs:label "Sponsorship" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Sports_Manager
+<http://www.semanticweb.org/pc/ontologies/2019/1/Sports_Manager> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/People> ;
+                                                                 rdfs:label "Sports Manager" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Stadium
+<http://www.semanticweb.org/pc/ontologies/2019/1/Stadium> rdf:type owl:Class ;
+                                                          rdfs:label "Stadium" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Team_Lineup
+<http://www.semanticweb.org/pc/ontologies/2019/1/Team_Lineup> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/UEFA_Champions_League
+<http://www.semanticweb.org/pc/ontologies/2019/1/UEFA_Champions_League> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Honours> ;
+                                                                        rdfs:label "UEFA_Champions_League" ;
+                                                                        <http://www.w3.org/2004/02/skos/core#definition> "The UEFA Champions League (abbreviated as UCL) is an annual club football competition organised by the Union of European Football Associations (UEFA) and contested by top-division European clubs." .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#1949
+<http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#1949> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Bundesliga> ,
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/Win> ;
+                                                                                          owl:allValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Runner_up>
+                                                                                        ] .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#1956
+<http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#1956> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Bundesliga> ,
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/Win> ;
+                                                                                          owl:allValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Champion>
+                                                                                        ] .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#1957
+<http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#1957> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Bundesliga> ,
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/Win> ;
+                                                                                          owl:allValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Champion>
+                                                                                        ] .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#1961
+<http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#1961> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Bundesliga> ,
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/Win> ;
+                                                                                          owl:allValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Runner_up>
+                                                                                        ] .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#1963
+<http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#1963> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Bundesliga> ,
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/Win> ;
+                                                                                          owl:allValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Champion>
+                                                                                        ] .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#1965
+<http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#1965> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/German_Cup> ,
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/Win> ;
+                                                                                          owl:allValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Champion>
+                                                                                        ] .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#1966
+<http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#1966> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Bundesliga> ,
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/Win> ;
+                                                                                          owl:allValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Runner_up>
+                                                                                        ] .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#1989
+<http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#1989> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/German_Cup> ,
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/Win> ;
+                                                                                          owl:allValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Champion>
+                                                                                        ] .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#1992
+<http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#1992> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Bundesliga> ,
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/Win> ;
+                                                                                          owl:allValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Runner_up>
+                                                                                        ] .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#1995
+<http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#1995> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Bundesliga> ,
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/Win> ;
+                                                                                          owl:allValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Champion>
+                                                                                        ] .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#1996
+<http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#1996> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Bundesliga> ,
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/Win> ;
+                                                                                          owl:allValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Champion>
+                                                                                        ] .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#1997
+<http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#1997> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/UEFA_Champions_League> ,
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/Win> ;
+                                                                                          owl:allValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Champion>
+                                                                                        ] .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#2002
+<http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#2002> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Bundesliga> ,
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/Win> ;
+                                                                                          owl:allValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Champion>
+                                                                                        ] .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#2011
+<http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#2011> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Bundesliga> ,
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/Win> ;
+                                                                                          owl:allValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Champion>
+                                                                                        ] .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#2012
+<http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#2012> rdf:type owl:Class ;
+                                                                        owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/pc/ontologies/2019/1/Bundesliga>
+                                                                                                                   <http://www.semanticweb.org/pc/ontologies/2019/1/German_Cup>
+                                                                                                                 ) ;
+                                                                                              rdf:type owl:Class
+                                                                                            ] ;
+                                                                        rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Bundesliga> ,
+                                                                                        <http://www.semanticweb.org/pc/ontologies/2019/1/German_Cup> ,
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/Win> ;
+                                                                                          owl:qualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                                                                          owl:onClass <http://www.semanticweb.org/pc/ontologies/2019/1/Champion>
+                                                                                        ] .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#2013
+<http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#2013> rdf:type owl:Class ;
+                                                                        owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/pc/ontologies/2019/1/Bundesliga>
+                                                                                                                   <http://www.semanticweb.org/pc/ontologies/2019/1/UEFA_Champions_League>
+                                                                                                                 ) ;
+                                                                                              rdf:type owl:Class
+                                                                                            ] ;
+                                                                        rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Bundesliga> ,
+                                                                                        <http://www.semanticweb.org/pc/ontologies/2019/1/UEFA_Champions_League> ,
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/Win> ;
+                                                                                          owl:qualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                                                                          owl:onClass <http://www.semanticweb.org/pc/ontologies/2019/1/Runner_up>
+                                                                                        ] .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#2014
+<http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#2014> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Bundesliga> ,
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/Win> ;
+                                                                                          owl:allValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Runner_up>
+                                                                                        ] .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#2016
+<http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#2016> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Bundesliga> ,
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/Win> ;
+                                                                                          owl:allValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Runner_up>
+                                                                                        ] .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#2017
+<http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#2017> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/German_Cup> ,
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/Win> ;
+                                                                                          owl:allValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Champion>
+                                                                                        ] .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-1-2-3A
+<http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-1-2-3A> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Team_Lineup> .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-1-2-3B
+<http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-1-2-3B> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Team_Lineup> .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-2-2-2A
+<http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-2-2-2A> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Team_Lineup> .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-2-2-2B
+<http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-2-2-2B> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Team_Lineup> .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-2-3-1A
+<http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-2-3-1A> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Team_Lineup> .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-2-3-1B
+<http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-2-3-1B> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Team_Lineup> .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-2-3-1C
+<http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-2-3-1C> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Team_Lineup> .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-3-3
+<http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-3-3> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf <http://www.semanticweb.org/pc/ontologies/2019/1/Team_Lineup> .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/A
+<http://www.semanticweb.org/pc/ontologies/2019/1/A> rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Abdou_Diallo
+<http://www.semanticweb.org/pc/ontologies/2019/1/Abdou_Diallo> rdf:type owl:NamedIndividual ,
+                                                                        <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundFrance> ,
+                                                                        <http://www.semanticweb.org/pc/ontologies/2019/1/Player> ,
+                                                                        <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-2-3-1B> ,
+                                                                        <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-2-3-1C> ,
+                                                                        <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-3-3> ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/hasPosition> ;
+                                                                          owl:allValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Midfielder>
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/height> ;
+                                                                          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                          owl:onDataRange owl:rational
+                                                                        ] ;
+                                                               <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofAttack> <http://www.semanticweb.org/pc/ontologies/2019/1/C> ;
+                                                               <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofDefence> <http://www.semanticweb.org/pc/ontologies/2019/1/B> ;
+                                                               <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofPower> <http://www.semanticweb.org/pc/ontologies/2019/1/B> ;
+                                                               <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofSpeed> <http://www.semanticweb.org/pc/ontologies/2019/1/B> ;
+                                                               <http://www.semanticweb.org/pc/ontologies/2019/1/height> 186 ;
+                                                               <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#No.> 4 .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Achraf_Hakimi
+<http://www.semanticweb.org/pc/ontologies/2019/1/Achraf_Hakimi> rdf:type owl:NamedIndividual ,
+                                                                         <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundMorocco> ,
+                                                                         <http://www.semanticweb.org/pc/ontologies/2019/1/Player> ,
+                                                                         <http://www.semanticweb.org/pc/ontologies/2019/1/Team_Lineup> ,
+                                                                         <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-2-2-2A> ,
+                                                                         <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-2-2-2B> ,
+                                                                         <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-2-3-1B> ,
+                                                                         <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-3-3> ,
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/hasPosition> ;
+                                                                           owl:allValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Defender>
+                                                                         ] ;
+                                                                <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofAttack> <http://www.semanticweb.org/pc/ontologies/2019/1/B> ;
+                                                                <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofDefence> <http://www.semanticweb.org/pc/ontologies/2019/1/C> ;
+                                                                <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofPower> <http://www.semanticweb.org/pc/ontologies/2019/1/B> ;
+                                                                <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofSpeed> <http://www.semanticweb.org/pc/ontologies/2019/1/A> ;
+                                                                <http://www.semanticweb.org/pc/ontologies/2019/1/height> 181 ;
+                                                                <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#No.> 5 .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Andreas_Beck
+<http://www.semanticweb.org/pc/ontologies/2019/1/Andreas_Beck> rdf:type owl:NamedIndividual ,
+                                                                        <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundGermany> ,
+                                                                        <http://www.semanticweb.org/pc/ontologies/2019/1/Fitness_Coach> .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Anke_Steffen
+<http://www.semanticweb.org/pc/ontologies/2019/1/Anke_Steffen> rdf:type owl:NamedIndividual ,
+                                                                        <http://www.semanticweb.org/pc/ontologies/2019/1/Athletik-Trainer> ,
+                                                                        <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundGermany> .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Axel_Witsel
+<http://www.semanticweb.org/pc/ontologies/2019/1/Axel_Witsel> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundBelgium> ,
+                                                                       <http://www.semanticweb.org/pc/ontologies/2019/1/Player> ,
+                                                                       <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-2-3-1C> ,
+                                                                       [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/hasPosition> ;
+                                                                         owl:allValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Midfielder>
+                                                                       ] ;
+                                                              <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofAttack> <http://www.semanticweb.org/pc/ontologies/2019/1/A> ;
+                                                              <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofDefence> <http://www.semanticweb.org/pc/ontologies/2019/1/B> ;
+                                                              <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofPower> <http://www.semanticweb.org/pc/ontologies/2019/1/A> ;
+                                                              <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofSpeed> <http://www.semanticweb.org/pc/ontologies/2019/1/C> ;
+                                                              <http://www.semanticweb.org/pc/ontologies/2019/1/height> 188 ;
+                                                              <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#No.> 28 .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/B
+<http://www.semanticweb.org/pc/ontologies/2019/1/B> rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/C
+<http://www.semanticweb.org/pc/ontologies/2019/1/C> rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Christian_Pulisic
+<http://www.semanticweb.org/pc/ontologies/2019/1/Christian_Pulisic> rdf:type owl:NamedIndividual ,
+                                                                             <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundUSA> ,
+                                                                             <http://www.semanticweb.org/pc/ontologies/2019/1/Out_On_Loan_Player> ,
+                                                                             <http://www.semanticweb.org/pc/ontologies/2019/1/Player> ,
+                                                                             <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-1-2-3A> ,
+                                                                             <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-2-3-1C> ,
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/hasPosition> ;
+                                                                               owl:allValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Forward>
+                                                                             ] ;
+                                                                    <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofAttack> <http://www.semanticweb.org/pc/ontologies/2019/1/B> ;
+                                                                    <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofDefence> <http://www.semanticweb.org/pc/ontologies/2019/1/D> ;
+                                                                    <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofPower> <http://www.semanticweb.org/pc/ontologies/2019/1/D> ;
+                                                                    <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofSpeed> <http://www.semanticweb.org/pc/ontologies/2019/1/A> ;
+                                                                    <http://www.semanticweb.org/pc/ontologies/2019/1/height> 173 ;
+                                                                    <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#No.> 20 .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/D
+<http://www.semanticweb.org/pc/ontologies/2019/1/D> rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Dan-Axel_Zagadou
+<http://www.semanticweb.org/pc/ontologies/2019/1/Dan-Axel_Zagadou> rdf:type owl:NamedIndividual ,
+                                                                            <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundFrance> ,
+                                                                            <http://www.semanticweb.org/pc/ontologies/2019/1/Player> ,
+                                                                            <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-1-2-3A> ,
+                                                                            <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-1-2-3B> ,
+                                                                            <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-2-3-1B> ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/hasPosition> ;
+                                                                              owl:allValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Defender>
+                                                                            ] ;
+                                                                   <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofAttack> <http://www.semanticweb.org/pc/ontologies/2019/1/D> ;
+                                                                   <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofDefence> <http://www.semanticweb.org/pc/ontologies/2019/1/B> ;
+                                                                   <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofPower> <http://www.semanticweb.org/pc/ontologies/2019/1/B> ;
+                                                                   <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofSpeed> <http://www.semanticweb.org/pc/ontologies/2019/1/D> ;
+                                                                   <http://www.semanticweb.org/pc/ontologies/2019/1/height> 196 ;
+                                                                   <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#No.> 2 .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Edin_Terzic
+<http://www.semanticweb.org/pc/ontologies/2019/1/Edin_Terzic> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundGermany> ,
+                                                                       <http://www.semanticweb.org/pc/ontologies/2019/1/Co-trainer> .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Florian_Wangler
+<http://www.semanticweb.org/pc/ontologies/2019/1/Florian_Wangler> rdf:type owl:NamedIndividual ,
+                                                                           <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundGermany> ,
+                                                                           <http://www.semanticweb.org/pc/ontologies/2019/1/Fitness_Coach> .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Hans-Joachim_Watzke
+<http://www.semanticweb.org/pc/ontologies/2019/1/Hans-Joachim_Watzke> rdf:type owl:NamedIndividual ,
+                                                                               <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundGermany> ,
+                                                                               <http://www.semanticweb.org/pc/ontologies/2019/1/CEO> .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Jacob_Bruun_Larsen
+<http://www.semanticweb.org/pc/ontologies/2019/1/Jacob_Bruun_Larsen> rdf:type owl:NamedIndividual ,
+                                                                              <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundDenmark> ,
+                                                                              <http://www.semanticweb.org/pc/ontologies/2019/1/Out_On_Loan_Player> ,
+                                                                              <http://www.semanticweb.org/pc/ontologies/2019/1/Player> ,
+                                                                              <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-2-2-2B> ,
+                                                                              <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-2-3-1B> ,
+                                                                              <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-3-3> ,
+                                                                              [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/hasPosition> ;
+                                                                                owl:allValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Midfielder>
+                                                                              ] ;
+                                                                     <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofAttack> <http://www.semanticweb.org/pc/ontologies/2019/1/C> ;
+                                                                     <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofDefence> <http://www.semanticweb.org/pc/ontologies/2019/1/D> ;
+                                                                     <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofPower> <http://www.semanticweb.org/pc/ontologies/2019/1/C> ;
+                                                                     <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofSpeed> <http://www.semanticweb.org/pc/ontologies/2019/1/B> ;
+                                                                     <http://www.semanticweb.org/pc/ontologies/2019/1/height> 183 ;
+                                                                     <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#No.> 34 .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Jadon_Sancho
+<http://www.semanticweb.org/pc/ontologies/2019/1/Jadon_Sancho> rdf:type owl:NamedIndividual ,
+                                                                        <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundEngland> ,
+                                                                        <http://www.semanticweb.org/pc/ontologies/2019/1/Player> ,
+                                                                        <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-2-2-2A> ,
+                                                                        <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-3-3> ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/hasPosition> ;
+                                                                          owl:allValuesFrom [ rdf:type owl:Class ;
+                                                                                              owl:unionOf ( <http://www.semanticweb.org/pc/ontologies/2019/1/Forward>
+                                                                                                            <http://www.semanticweb.org/pc/ontologies/2019/1/Midfielder>
+                                                                                                          )
+                                                                                            ]
+                                                                        ] ;
+                                                               <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofAttack> <http://www.semanticweb.org/pc/ontologies/2019/1/B> ;
+                                                               <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofDefence> <http://www.semanticweb.org/pc/ontologies/2019/1/D> ;
+                                                               <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofPower> <http://www.semanticweb.org/pc/ontologies/2019/1/D> ;
+                                                               <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofSpeed> <http://www.semanticweb.org/pc/ontologies/2019/1/A> ;
+                                                               <http://www.semanticweb.org/pc/ontologies/2019/1/height> 180 ;
+                                                               <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#No.> 7 .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Julian_Weigl
+<http://www.semanticweb.org/pc/ontologies/2019/1/Julian_Weigl> rdf:type owl:NamedIndividual ,
+                                                                        <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundGermany> ,
+                                                                        <http://www.semanticweb.org/pc/ontologies/2019/1/Player> ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/hasPosition> ;
+                                                                          owl:someValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Defender>
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/hasPosition> ;
+                                                                          owl:someValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Midfielder>
+                                                                        ] ;
+                                                               <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofAttack> <http://www.semanticweb.org/pc/ontologies/2019/1/C> ;
+                                                               <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofDefence> <http://www.semanticweb.org/pc/ontologies/2019/1/B> ;
+                                                               <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofPower> <http://www.semanticweb.org/pc/ontologies/2019/1/C> ;
+                                                               <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofSpeed> <http://www.semanticweb.org/pc/ontologies/2019/1/D> ;
+                                                               <http://www.semanticweb.org/pc/ontologies/2019/1/height> 187 ;
+                                                               <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#No.> 33 .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Lucien_Favre
+<http://www.semanticweb.org/pc/ontologies/2019/1/Lucien_Favre> rdf:type owl:NamedIndividual ,
+                                                                        <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundSwitzerland> ,
+                                                                        <http://www.semanticweb.org/pc/ontologies/2019/1/Chef-Coach> .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Lukasz_Piszczek
+<http://www.semanticweb.org/pc/ontologies/2019/1/Lukasz_Piszczek> rdf:type owl:NamedIndividual ,
+                                                                           <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundPoland> ,
+                                                                           <http://www.semanticweb.org/pc/ontologies/2019/1/Player> ,
+                                                                           <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-1-2-3A> ,
+                                                                           <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-1-2-3B> ,
+                                                                           <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-2-2-2A> ,
+                                                                           <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-2-2-2B> ,
+                                                                           <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-2-3-1B> ,
+                                                                           <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-3-3> ,
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/hasPosition> ;
+                                                                             owl:allValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Defender>
+                                                                           ] ;
+                                                                  <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofAttack> <http://www.semanticweb.org/pc/ontologies/2019/1/C> ;
+                                                                  <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofDefence> <http://www.semanticweb.org/pc/ontologies/2019/1/B> ;
+                                                                  <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofPower> <http://www.semanticweb.org/pc/ontologies/2019/1/B> ;
+                                                                  <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofSpeed> <http://www.semanticweb.org/pc/ontologies/2019/1/B> ;
+                                                                  <http://www.semanticweb.org/pc/ontologies/2019/1/height> 184 ;
+                                                                  <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#No.> 26 .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Mahmoud_Dahoud
+<http://www.semanticweb.org/pc/ontologies/2019/1/Mahmoud_Dahoud> rdf:type owl:NamedIndividual ,
+                                                                          <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundGermany> ,
+                                                                          <http://www.semanticweb.org/pc/ontologies/2019/1/Player> ,
+                                                                          <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-1-2-3A> ,
+                                                                          <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-1-2-3B> ,
+                                                                          <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-2-2-2A> ,
+                                                                          <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-2-2-2B> ,
+                                                                          <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-2-3-1B> ,
+                                                                          <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-2-3-1C> ,
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/hasPosition> ;
+                                                                            owl:allValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Midfielder>
+                                                                          ] ;
+                                                                 <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofAttack> <http://www.semanticweb.org/pc/ontologies/2019/1/B> ;
+                                                                 <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofDefence> <http://www.semanticweb.org/pc/ontologies/2019/1/C> ;
+                                                                 <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofPower> <http://www.semanticweb.org/pc/ontologies/2019/1/C> ;
+                                                                 <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofSpeed> <http://www.semanticweb.org/pc/ontologies/2019/1/C> ;
+                                                                 <http://www.semanticweb.org/pc/ontologies/2019/1/height> 176 ;
+                                                                 <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#No.> 19 .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Manfred_Stefes
+<http://www.semanticweb.org/pc/ontologies/2019/1/Manfred_Stefes> rdf:type owl:NamedIndividual ,
+                                                                          <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundGermany> ,
+                                                                          <http://www.semanticweb.org/pc/ontologies/2019/1/Co-trainer> .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Manuel_Akanji
+<http://www.semanticweb.org/pc/ontologies/2019/1/Manuel_Akanji> rdf:type owl:NamedIndividual ,
+                                                                         <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundSwitzerland> ,
+                                                                         <http://www.semanticweb.org/pc/ontologies/2019/1/Player> ,
+                                                                         <http://www.semanticweb.org/pc/ontologies/2019/1/Team_Lineup> ,
+                                                                         <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-1-2-3B> ,
+                                                                         <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-2-3-1C> ,
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/hasPosition> ;
+                                                                           owl:allValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Defender>
+                                                                         ] ;
+                                                                <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofAttack> <http://www.semanticweb.org/pc/ontologies/2019/1/C> ;
+                                                                <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofDefence> <http://www.semanticweb.org/pc/ontologies/2019/1/B> ;
+                                                                <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofPower> <http://www.semanticweb.org/pc/ontologies/2019/1/B> ;
+                                                                <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofSpeed> <http://www.semanticweb.org/pc/ontologies/2019/1/B> ;
+                                                                <http://www.semanticweb.org/pc/ontologies/2019/1/height> 186 ;
+                                                                <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#No.> 16 .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Marcel_Schmelzer
+<http://www.semanticweb.org/pc/ontologies/2019/1/Marcel_Schmelzer> rdf:type owl:NamedIndividual ,
+                                                                            <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundGermany> ,
+                                                                            <http://www.semanticweb.org/pc/ontologies/2019/1/Player> ,
+                                                                            <http://www.semanticweb.org/pc/ontologies/2019/1/Team_Lineup> ,
+                                                                            <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-1-2-3A> ,
+                                                                            <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-1-2-3B> ,
+                                                                            <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-2-2-2A> ,
+                                                                            <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-2-2-2B> ,
+                                                                            <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-2-3-1C> ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/hasPosition> ;
+                                                                              owl:allValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Defender>
+                                                                            ] ;
+                                                                   <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofAttack> <http://www.semanticweb.org/pc/ontologies/2019/1/D> ;
+                                                                   <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofDefence> <http://www.semanticweb.org/pc/ontologies/2019/1/B> ;
+                                                                   <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofPower> <http://www.semanticweb.org/pc/ontologies/2019/1/B> ;
+                                                                   <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofSpeed> <http://www.semanticweb.org/pc/ontologies/2019/1/B> ;
+                                                                   <http://www.semanticweb.org/pc/ontologies/2019/1/height> 180 ;
+                                                                   <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#No.> 29 .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Marco_Reus
+<http://www.semanticweb.org/pc/ontologies/2019/1/Marco_Reus> rdf:type owl:NamedIndividual ,
+                                                                      <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundGermany> ,
+                                                                      <http://www.semanticweb.org/pc/ontologies/2019/1/Player> ,
+                                                                      <http://www.semanticweb.org/pc/ontologies/2019/1/Team_Lineup> ,
+                                                                      <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-1-2-3A> ,
+                                                                      <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-1-2-3B> ,
+                                                                      <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-2-2-2A> ,
+                                                                      <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-2-2-2B> ,
+                                                                      <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-2-3-1B> ,
+                                                                      <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-2-3-1C> ,
+                                                                      <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-3-3> ,
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/hasPosition> ;
+                                                                        owl:someValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Forward>
+                                                                      ] ,
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/hasPosition> ;
+                                                                        owl:someValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Midfielder>
+                                                                      ] ,
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/Win> ;
+                                                                        owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                                      ] ;
+                                                             <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofAttack> <http://www.semanticweb.org/pc/ontologies/2019/1/A> ;
+                                                             <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofDefence> <http://www.semanticweb.org/pc/ontologies/2019/1/D> ;
+                                                             <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofPower> <http://www.semanticweb.org/pc/ontologies/2019/1/C> ;
+                                                             <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofSpeed> <http://www.semanticweb.org/pc/ontologies/2019/1/A> ;
+                                                             <http://www.semanticweb.org/pc/ontologies/2019/1/height> 180 ;
+                                                             <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#No.> 11 .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Mario_Gotze
+<http://www.semanticweb.org/pc/ontologies/2019/1/Mario_Gotze> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundGermany> ,
+                                                                       <http://www.semanticweb.org/pc/ontologies/2019/1/Player> ,
+                                                                       <http://www.semanticweb.org/pc/ontologies/2019/1/Team_Lineup> ,
+                                                                       <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-1-2-3A> ,
+                                                                       <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-2-3-1C> ,
+                                                                       <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-3-3> ,
+                                                                       [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/hasPosition> ;
+                                                                         owl:someValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Forward>
+                                                                       ] ,
+                                                                       [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/hasPosition> ;
+                                                                         owl:someValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Midfielder>
+                                                                       ] ,
+                                                                       [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/Win> ;
+                                                                         owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                                                         owl:onClass <http://www.semanticweb.org/pc/ontologies/2019/1/Bundesliga>
+                                                                       ] ;
+                                                              <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofAttack> <http://www.semanticweb.org/pc/ontologies/2019/1/B> ;
+                                                              <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofDefence> <http://www.semanticweb.org/pc/ontologies/2019/1/D> ;
+                                                              <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofPower> <http://www.semanticweb.org/pc/ontologies/2019/1/C> ;
+                                                              <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofSpeed> <http://www.semanticweb.org/pc/ontologies/2019/1/C> ;
+                                                              <http://www.semanticweb.org/pc/ontologies/2019/1/height> 176 ;
+                                                              <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#No.> 10 .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Marius_Wolf
+<http://www.semanticweb.org/pc/ontologies/2019/1/Marius_Wolf> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundGermany> ,
+                                                                       <http://www.semanticweb.org/pc/ontologies/2019/1/Player> ,
+                                                                       <http://www.semanticweb.org/pc/ontologies/2019/1/Team_Lineup> ,
+                                                                       <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-2-2-2B> ,
+                                                                       <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-2-3-1B> ,
+                                                                       [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/hasPosition> ;
+                                                                         owl:allValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Forward>
+                                                                       ] ;
+                                                              <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofAttack> <http://www.semanticweb.org/pc/ontologies/2019/1/C> ;
+                                                              <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofDefence> <http://www.semanticweb.org/pc/ontologies/2019/1/D> ;
+                                                              <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofPower> <http://www.semanticweb.org/pc/ontologies/2019/1/C> ;
+                                                              <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofSpeed> <http://www.semanticweb.org/pc/ontologies/2019/1/A> ;
+                                                              <http://www.semanticweb.org/pc/ontologies/2019/1/height> 188 ;
+                                                              <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#No.> 27 .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Marwin_Hitz
+<http://www.semanticweb.org/pc/ontologies/2019/1/Marwin_Hitz> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundSwitzerland> ,
+                                                                       <http://www.semanticweb.org/pc/ontologies/2019/1/Player> ,
+                                                                       [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/hasPosition> ;
+                                                                         owl:allValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Goalkeeper>
+                                                                       ] ;
+                                                              <http://www.semanticweb.org/pc/ontologies/2019/1/height> 192 ;
+                                                              <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#No.> 35 .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Maximilian_Philipp
+<http://www.semanticweb.org/pc/ontologies/2019/1/Maximilian_Philipp> rdf:type owl:NamedIndividual ,
+                                                                              <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundGermany> ,
+                                                                              <http://www.semanticweb.org/pc/ontologies/2019/1/Player> ,
+                                                                              <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-1-2-3A> ,
+                                                                              <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-1-2-3B> ,
+                                                                              [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/hasPosition> ;
+                                                                                owl:someValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Forward>
+                                                                              ] ,
+                                                                              [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/hasPosition> ;
+                                                                                owl:someValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Midfielder>
+                                                                              ] ;
+                                                                     <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofAttack> <http://www.semanticweb.org/pc/ontologies/2019/1/B> ;
+                                                                     <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofDefence> <http://www.semanticweb.org/pc/ontologies/2019/1/D> ;
+                                                                     <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofPower> <http://www.semanticweb.org/pc/ontologies/2019/1/C> ;
+                                                                     <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofSpeed> <http://www.semanticweb.org/pc/ontologies/2019/1/B> ;
+                                                                     <http://www.semanticweb.org/pc/ontologies/2019/1/height> 183 ;
+                                                                     <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#No.> 20 .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Michael_Zorc
+<http://www.semanticweb.org/pc/ontologies/2019/1/Michael_Zorc> rdf:type owl:NamedIndividual ,
+                                                                        <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundGermany> ,
+                                                                        <http://www.semanticweb.org/pc/ontologies/2019/1/Sports_Manager> .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Omer_Toprak
+<http://www.semanticweb.org/pc/ontologies/2019/1/Omer_Toprak> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundTurkey> ,
+                                                                       <http://www.semanticweb.org/pc/ontologies/2019/1/Player> ,
+                                                                       <http://www.semanticweb.org/pc/ontologies/2019/1/Team_Lineup> ,
+                                                                       <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-3-3> ,
+                                                                       [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/hasPosition> ;
+                                                                         owl:allValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Defender>
+                                                                       ] ;
+                                                              <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofAttack> <http://www.semanticweb.org/pc/ontologies/2019/1/D> ;
+                                                              <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofDefence> <http://www.semanticweb.org/pc/ontologies/2019/1/B> ;
+                                                              <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofPower> <http://www.semanticweb.org/pc/ontologies/2019/1/C> ;
+                                                              <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofSpeed> <http://www.semanticweb.org/pc/ontologies/2019/1/B> ;
+                                                              <http://www.semanticweb.org/pc/ontologies/2019/1/height> 186 ;
+                                                              <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#No.> 36 .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Paco_Alcacer
+<http://www.semanticweb.org/pc/ontologies/2019/1/Paco_Alcacer> rdf:type owl:NamedIndividual ,
+                                                                        <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundSpain> ,
+                                                                        <http://www.semanticweb.org/pc/ontologies/2019/1/Out_On_Loan_Player> ,
+                                                                        <http://www.semanticweb.org/pc/ontologies/2019/1/Player> ,
+                                                                        <http://www.semanticweb.org/pc/ontologies/2019/1/Team_Lineup> ,
+                                                                        <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-1-2-3A> ,
+                                                                        <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-1-2-3B> ,
+                                                                        <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-2-2-2A> ,
+                                                                        <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-2-2-2B> ,
+                                                                        <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-2-3-1B> ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/hasPosition> ;
+                                                                          owl:allValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Forward>
+                                                                        ] ;
+                                                               <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofAttack> <http://www.semanticweb.org/pc/ontologies/2019/1/A> ;
+                                                               <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofDefence> <http://www.semanticweb.org/pc/ontologies/2019/1/D> ;
+                                                               <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofPower> <http://www.semanticweb.org/pc/ontologies/2019/1/D> ;
+                                                               <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofSpeed> <http://www.semanticweb.org/pc/ontologies/2019/1/B> ;
+                                                               <http://www.semanticweb.org/pc/ontologies/2019/1/height> 175 ;
+                                                               <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#No.> 9 .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Raphael_Guerreiro
+<http://www.semanticweb.org/pc/ontologies/2019/1/Raphael_Guerreiro> rdf:type owl:NamedIndividual ,
+                                                                             <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundPortugal> ,
+                                                                             <http://www.semanticweb.org/pc/ontologies/2019/1/Player> ,
+                                                                             <http://www.semanticweb.org/pc/ontologies/2019/1/Team_Lineup> ,
+                                                                             <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-2-2-2A> ,
+                                                                             <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-2-2-2B> ,
+                                                                             <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-3-3> ,
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/hasPosition> ;
+                                                                               owl:allValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Midfielder>
+                                                                             ] ;
+                                                                    <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofAttack> <http://www.semanticweb.org/pc/ontologies/2019/1/B> ;
+                                                                    <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofDefence> <http://www.semanticweb.org/pc/ontologies/2019/1/C> ;
+                                                                    <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofPower> <http://www.semanticweb.org/pc/ontologies/2019/1/D> ;
+                                                                    <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofSpeed> <http://www.semanticweb.org/pc/ontologies/2019/1/C> ;
+                                                                    <http://www.semanticweb.org/pc/ontologies/2019/1/height> 170 ;
+                                                                    <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#No.> 13 .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Roman_Burki
+<http://www.semanticweb.org/pc/ontologies/2019/1/Roman_Burki> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundSwitzerland> ,
+                                                                       <http://www.semanticweb.org/pc/ontologies/2019/1/Player> ,
+                                                                       <http://www.semanticweb.org/pc/ontologies/2019/1/Team_Lineup> ,
+                                                                       <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-1-2-3A> ,
+                                                                       <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-1-2-3B> ,
+                                                                       <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-2-2-2A> ,
+                                                                       <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-2-2-2B> ,
+                                                                       <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-2-3-1B> ,
+                                                                       <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-2-3-1C> ,
+                                                                       [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/hasPosition> ;
+                                                                         owl:allValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Goalkeeper>
+                                                                       ] ;
+                                                              <http://www.semanticweb.org/pc/ontologies/2019/1/height> 188 ;
+                                                              <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#No.> 1 .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Sergio_Gomez
+<http://www.semanticweb.org/pc/ontologies/2019/1/Sergio_Gomez> rdf:type owl:NamedIndividual ,
+                                                                        <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundSpain> ,
+                                                                        <http://www.semanticweb.org/pc/ontologies/2019/1/Player> ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/hasPosition> ;
+                                                                          owl:allValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Midfielder>
+                                                                        ] ;
+                                                               <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofAttack> <http://www.semanticweb.org/pc/ontologies/2019/1/C> ;
+                                                               <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofDefence> <http://www.semanticweb.org/pc/ontologies/2019/1/D> ;
+                                                               <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofPower> <http://www.semanticweb.org/pc/ontologies/2019/1/D> ;
+                                                               <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofSpeed> <http://www.semanticweb.org/pc/ontologies/2019/1/C> ;
+                                                               <http://www.semanticweb.org/pc/ontologies/2019/1/height> 171 ;
+                                                               <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#No.> 17 .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Shinji_Kagawa
+<http://www.semanticweb.org/pc/ontologies/2019/1/Shinji_Kagawa> rdf:type owl:NamedIndividual ,
+                                                                         <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundJapan> ,
+                                                                         <http://www.semanticweb.org/pc/ontologies/2019/1/Out_On_Loan_Player> ;
+                                                                <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofAttack> <http://www.semanticweb.org/pc/ontologies/2019/1/B> ;
+                                                                <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofDefence> <http://www.semanticweb.org/pc/ontologies/2019/1/D> ;
+                                                                <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofSpeed> <http://www.semanticweb.org/pc/ontologies/2019/1/C> ,
+                                                                                                                                    <http://www.semanticweb.org/pc/ontologies/2019/1/D> .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Signal_Iduna_Park
+<http://www.semanticweb.org/pc/ontologies/2019/1/Signal_Iduna_Park> rdf:type owl:NamedIndividual ,
+                                                                             <http://www.semanticweb.org/pc/ontologies/2019/1/Stadium> .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2019/1/Thomas_Delaney
+<http://www.semanticweb.org/pc/ontologies/2019/1/Thomas_Delaney> rdf:type owl:NamedIndividual ,
+                                                                          <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmundDenmark> ,
+                                                                          <http://www.semanticweb.org/pc/ontologies/2019/1/Player> ,
+                                                                          <http://www.semanticweb.org/pc/ontologies/2019/1/Team_Lineup> ,
+                                                                          <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-1-2-3B> ,
+                                                                          <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-2-2-2A> ,
+                                                                          <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-2-3-1C> ,
+                                                                          <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#4-3-3> ,
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty <http://www.semanticweb.org/pc/ontologies/2019/1/hasPosition> ;
+                                                                            owl:allValuesFrom <http://www.semanticweb.org/pc/ontologies/2019/1/Midfielder>
+                                                                          ] ;
+                                                                 <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofAttack> <http://www.semanticweb.org/pc/ontologies/2019/1/B> ;
+                                                                 <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofDefence> <http://www.semanticweb.org/pc/ontologies/2019/1/B> ;
+                                                                 <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofPower> <http://www.semanticweb.org/pc/ontologies/2019/1/B> ;
+                                                                 <http://www.semanticweb.org/pc/ontologies/2019/1/hasAbilityofSpeed> <http://www.semanticweb.org/pc/ontologies/2019/1/B> ;
+                                                                 <http://www.semanticweb.org/pc/ontologies/2019/1/height> 182 ;
+                                                                 <http://www.semanticweb.org/pc/ontologies/2019/1/BorussiaDortmund#No.> 6 .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://www.semanticweb.org/pc/ontologies/2019/1/Athletik-Trainer>
+                <http://www.semanticweb.org/pc/ontologies/2019/1/Chef-Coach>
+                <http://www.semanticweb.org/pc/ontologies/2019/1/Co-trainer>
+                <http://www.semanticweb.org/pc/ontologies/2019/1/Fitness_Coach>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://www.semanticweb.org/pc/ontologies/2019/1/CEO>
+                <http://www.semanticweb.org/pc/ontologies/2019/1/Coaches>
+                <http://www.semanticweb.org/pc/ontologies/2019/1/Player>
+                <http://www.semanticweb.org/pc/ontologies/2019/1/Sports_Manager>
+              )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( <http://www.semanticweb.org/pc/ontologies/2019/1/Abdou_Diallo>
+                        <http://www.semanticweb.org/pc/ontologies/2019/1/Achraf_Hakimi>
+                        <http://www.semanticweb.org/pc/ontologies/2019/1/Axel_Witsel>
+                        <http://www.semanticweb.org/pc/ontologies/2019/1/Christian_Pulisic>
+                        <http://www.semanticweb.org/pc/ontologies/2019/1/Dan-Axel_Zagadou>
+                        <http://www.semanticweb.org/pc/ontologies/2019/1/Jacob_Bruun_Larsen>
+                        <http://www.semanticweb.org/pc/ontologies/2019/1/Jadon_Sancho>
+                        <http://www.semanticweb.org/pc/ontologies/2019/1/Julian_Weigl>
+                        <http://www.semanticweb.org/pc/ontologies/2019/1/Lukasz_Piszczek>
+                        <http://www.semanticweb.org/pc/ontologies/2019/1/Mahmoud_Dahoud>
+                        <http://www.semanticweb.org/pc/ontologies/2019/1/Manuel_Akanji>
+                        <http://www.semanticweb.org/pc/ontologies/2019/1/Marcel_Schmelzer>
+                        <http://www.semanticweb.org/pc/ontologies/2019/1/Marco_Reus>
+                        <http://www.semanticweb.org/pc/ontologies/2019/1/Mario_Gotze>
+                        <http://www.semanticweb.org/pc/ontologies/2019/1/Marius_Wolf>
+                        <http://www.semanticweb.org/pc/ontologies/2019/1/Marwin_Hitz>
+                        <http://www.semanticweb.org/pc/ontologies/2019/1/Maximilian_Philipp>
+                        <http://www.semanticweb.org/pc/ontologies/2019/1/Omer_Toprak>
+                        <http://www.semanticweb.org/pc/ontologies/2019/1/Paco_Alcacer>
+                        <http://www.semanticweb.org/pc/ontologies/2019/1/Raphael_Guerreiro>
+                        <http://www.semanticweb.org/pc/ontologies/2019/1/Roman_Burki>
+                        <http://www.semanticweb.org/pc/ontologies/2019/1/Sergio_Gomez>
+                        <http://www.semanticweb.org/pc/ontologies/2019/1/Thomas_Delaney>
+                      )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
